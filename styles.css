@@ -1,0 +1,263 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    padding: 20px;
+    color: #333;
+    line-height: 1.6;
+}
+
+.ribbon-header {
+    position: relative;
+    text-align: center;
+    padding: 1em 0;
+    margin: 2em auto;
+    max-width: 800px;
+}
+
+.ribbon-header h1 {
+    position: relative;
+    z-index: 2;
+    margin: 0;
+    padding: 0.5em 1em;
+    background: #fff;
+    display: inline-block;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    font-family: 'Arial', sans-serif;
+    font-weight: bold;
+    color: #663300;
+}
+
+.ribbon-header h1 span.highlight {
+    color: #006633;
+    font-weight: bolder;
+}
+
+.ribbon {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: #e6e6e6;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 2px;
+}
+
+.ribbon:before, .ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.6em;
+    border: 1.5em solid #ccc;
+    z-index: -1;
+}
+
+.ribbon:before {
+    left: -2em;
+    border-right-width: 1.5em;
+    border-left-color: transparent;
+}
+
+.ribbon:after {
+    right: -2em;
+    border-left-width: 1.5em;
+    border-right-color: transparent;
+}
+
+.ribbon .ribbon-content:before, .ribbon .ribbon-content:after {
+    content: "";
+    position: absolute;
+    display: block;
+    border-style: solid;
+    border-color: #999 transparent transparent transparent;
+    bottom: -0.6em;
+}
+
+.ribbon .ribbon-content:before {
+    left: 0;
+    border-width: 0.6em 0 0 0.6em;
+}
+
+.ribbon .ribbon-content:after {
+    right: 0;
+    border-width: 0.6em 0.6em 0 0;
+}
+
+h2, h3 {
+    color: #663300;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.container {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+label {
+    display: inline-block;
+    width: 250px;
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 250px;
+    box-sizing: border-box;
+    font-size: 14px;
+}
+
+
+.name-inputs {
+    display: flex;
+    gap: 10px;
+    width: calc(100% - 265px); 
+}
+
+.name-inputs input {
+    flex: 1;
+    min-width: 0; 
+}
+
+.dates {
+    display: flex;
+    gap: 15px;
+}
+
+.dates .form-group {
+    display: flex;
+    flex-direction: column; /* Stack label on top of input */
+    align-items: flex-start; /* Align label to the left */
+}
+
+.dates .form-group:last-child {
+    margin-right: 0;
+}
+
+.dates label {
+    width: auto;
+    margin-right: 10px;
+}
+
+.dates input {
+    width: 100%;
+}
+
+.result-section {
+    margin-top: 40px;
+    padding-top: 25px;
+    border-top: 1px solid #ddd;
+}
+
+.result-section h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.bill-breakdown {
+    margin-top: 25px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.bill-breakdown h3 {
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.bill-item {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    padding-bottom: 5px;
+    border-bottom: 1px dotted #ddd;
+}
+
+.bill-item:last-of-type {
+    border-bottom: none;
+}
+
+.total-bill {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+    color: #006633;
+}
+
+button {
+    background-color: #006633;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 25px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #004d26;
+}
+
+.hidden {
+    display: none;
+}
+
+.rates-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.rates-table th, .rates-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+.rates-table th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+
+.rates-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.rates-table tr:hover {
+    background-color: #f5f5f5;
+}
+
+.info-section {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #f8f8f8;
+    border-radius: 6px;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}

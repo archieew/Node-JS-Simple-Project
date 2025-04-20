@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billing Summary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Billing Summary</h2>
+
+        <div class="form-group">
+            <label>TRate per kWh:</label>
+            <span id="ratePerKwh"></span>
+        </div>
+        
+        <div class="form-group">
+            <label>Total Energy Consumption (kWh):</label>
+            <span id="totalConsumption"></span>
+        </div>
+        
+        <div class="form-group">
+            <label>Consumption Energy Bill:</label>
+            <span id="consumptionBill"></span>
+        </div>
+        
+        <div class="bill-breakdown">
+            <h3>Breakdown of Bill Payment:</h3>
+            <div class="bill-item">
+                <span>Generation Charge (55%):</span>
+                <span id="generationCharge"></span>
+            </div>
+            <div class="bill-item">
+                <span>Transmission Charge (10.1%):</span>
+                <span id="transmissionCharge"></span>
+            </div>
+            <div class="bill-item">
+                <span>Distribution Charge (17.5%):</span>
+                <span id="distributionCharge"></span>
+            </div>
+            <div class="bill-item">
+                <span>Taxes (11.7%):</span>
+                <span id="taxes"></span>
+            </div>
+            <div class="bill-item">
+                <span>Other Taxes (5.7%):</span>
+                <span id="otherTaxes"></span>
+            </div>
+            <div class="bill-item total-bill">
+                <span>Total Bill:</span>
+                <span id="totalBill"></span>
+            </div>
+        </div>
+
+        <button onclick="window.history.back()">Go Back</button>
+    </div>
+    <script src="result.js"></script>
+</body>
+</html>
